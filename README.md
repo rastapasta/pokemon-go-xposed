@@ -1,7 +1,7 @@
-# Pokemon Go Xposed - Disables certificate pin pointing on the fly!
+# Pokemon Go Xposed - Let it trust, let it trust!
 
 This Xposed module takes care of always letting the Pokemon Go app think it's in its trusted surrounding.
-Whatever trust chain is actually established when conneting to the API, it will be replaced by the one expected by the app.
+Whatever trust chain is actually established when connecting to the API, it will be replaced with the one expected by the app.
 
 This makes MITM thingies like [pokemon-go-mitm](https://github.com/rastapasta/pokemon-go-mitm-node) work again :)
 
