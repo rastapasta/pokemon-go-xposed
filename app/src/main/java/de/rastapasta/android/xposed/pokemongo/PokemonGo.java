@@ -1,6 +1,5 @@
 package de.rastapasta.android.xposed.pokemongo;
 
-
 import de.robv.android.xposed.IXposedHookLoadPackage;
 import de.robv.android.xposed.XposedBridge;
 import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam;
@@ -11,8 +10,8 @@ import java.security.cert.X509Certificate;
 import org.apache.commons.lang3.SerializationUtils;
 import android.util.Base64;
 
-
 public class PokemonGo implements IXposedHookLoadPackage {
+    // Contains the original certificate chain, serialized and Base64 encoded 
     private static String originalChain =
             "rO0ABXVyACVbTGphdmEuc2VjdXJpdHkuY2VydC5YNTA5Q2VydGlmaWNhdGU7V79uQD0B25oCAAB4"+
             "cAAAAAJzcgAtamF2YS5zZWN1cml0eS5jZXJ0LkNlcnRpZmljYXRlJENlcnRpZmljYXRlUmVwiSdq"+
@@ -78,12 +77,12 @@ public class PokemonGo implements IXposedHookLoadPackage {
         findAndHookMethod("com.nianticlabs.nia.network.NianticTrustManager", lpparam.classLoader, "checkServerTrusted", cert.getClass(), String.class, new XC_MethodHook() {
             @Override
             protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
-                XposedBridge.log("Replacing Pokemon Go chain of trust");
+                XposedBridge.log("Replacing Pokemon Go's chain of trust");
 
-                // Decoding old chain
-                byte[] buffer= Base64.decode(originalChain, Base64.DEFAULT);
+                // Decode the stored original chain
+                byte[] buffer = Base64.decode(originalChain, Base64.DEFAULT);
 
-                // Restoring the original chain and replacing it in the call arguments
+                // Restore the original chain object and inject it into the call arguments
                 param.args[0] = (X509Certificate[])SerializationUtils.deserialize(buffer);
             }
         });
