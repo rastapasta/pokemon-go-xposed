@@ -9,7 +9,7 @@ This makes MITM thingies like [pokemon-go-mitm](https://github.com/rastapasta/po
 * Your phone must be *rooted*
 * Install the [Xposed Framework](http://repo.xposed.info/module/de.robv.android.xposed.installer)
 * To install
-  * install *Pokemon Go Trust Certificate* via the Xposed Installer
+  * install [Pokemon Go Trust Certificate](http://repo.xposed.info/module/de.rastapasta.android.xposed.pokemongo) via the Xposed Installer
   * or manually download and install the [PokemonGoXposed module](https://github.com/rastapasta/pokemon-go-xposed/releases/download/v1.1/PokemonGoXposed.apk)
 * Activate the module in the Xposed Installer
 * Restart your phone!
