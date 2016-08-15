@@ -1,5 +1,8 @@
 # Pokemon Go Xposed - Let it trust, let it trust!
 
+![pokemon](https://img.shields.io/badge/Pokemon%20GO-0.33.0-blue.svg?style=flat-square")
+![license](https://img.shields.io/github/license/rastapasta/pokemon-go-mitm-node.svg)
+
 This Xposed module takes care of always letting the Pokemon Go app think it's in its trusted surrounding.
 Whatever trust chain is actually established when connecting to the API, it will be replaced with the one expected by the app.
 
