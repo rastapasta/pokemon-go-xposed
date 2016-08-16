@@ -12,7 +12,7 @@ Additionally it lets you set a custom API endpoint instead of the hardcoded one,
 
 ## How does it look?
 
-<img src="https://i.imgur.com/YzNV0Gc.png" height="800" />
+<img src="https://i.imgur.com/LCKctld.png" height="800" />
 
 ## How to use it?
 * Your phone must be *rooted*
