@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">Pokemon Go Xposed</string>
+    <string name="app_name">Pokemon Xposed</string>
+    <string name="title_activity_settings">Pokemon Go Xposed</string>
+
+    <!-- Example General settings -->
+    <string name="pref_title_enable">Enable custom endpoint</string>
+    <string name="pref_hint_endpoint">Server:Port</string>
+    <string name="pref_title_endpoint">Set custom endpoint</string>
+    <string name="pref_title_ssl">Endpoint supports SSL</string>
+    <string name="pref_category">Settings</string>
+    <string name="header_title">Welcome to pokemon-go-xposed!</string>
+    <string name="header_summary">\nThis Xposed module takes care of always letting the Pokemon Go app think it\'s in its trusted surrounding. Whatever trust chain is actually established when connecting to the API, it will be replaced with the one expected by the app.\n\nIn addition to that you can configure a custom API endpoint - for community servers like POGOserver or MITM solutions like pokemon-go-mitm.</string>
 </resources>

@@ -1,0 +1,29 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:key="pref_static_field_key"
+        android:selectable="false"
+        android:persistent="false"
+        android:title="@string/header_title"
+        android:summary="@string/header_summary"/>
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="enable_endpoint"
+        android:title="@string/pref_title_enable" />
+
+    <PreferenceCategory android:title="@string/pref_category">
+        <EditTextPreference
+            android:defaultValue=""
+            android:hint="@string/pref_hint_endpoint"
+            android:inputType="text"
+            android:key="endpoint"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:title="@string/pref_title_endpoint" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="enable_ssl"
+            android:title="@string/pref_title_ssl"/>
+    </PreferenceCategory>
+</PreferenceScreen>
