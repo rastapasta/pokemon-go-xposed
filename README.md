@@ -10,6 +10,8 @@ This makes MITM thingies like [pokemon-go-mitm](https://github.com/rastapasta/po
 
 Additionally it lets you set a custom API endpoint instead of the hardcoded one, making community servers like [POGOserver](https://github.com/maierfelix/POGOserver) usable.
 
+## How does it look?
+
 <img src="https://i.imgur.com/YzNV0Gc.png" height="800" />
 
 ## How to use it?
