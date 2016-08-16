@@ -2,6 +2,9 @@ package de.rastapasta.android.xposed.pokemongo;
 
 
 import android.annotation.TargetApi;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.Preference;
@@ -52,6 +55,21 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             setHasOptionsMenu(false);
 
             bindPreferenceSummaryToValue(findPreference("endpoint"));
+
+            findPreference("hide_app").setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object newVal) {
+                    boolean b = (Boolean) newVal;
+                    Context c = preference.getContext();
+                    PackageManager pm = c.getPackageManager();
+                    pm.setComponentEnabledSetting(
+                            new ComponentName(c, SettingsActivity.class.getPackage().getName()+".show_ic"),
+                            b ? PackageManager.COMPONENT_ENABLED_STATE_DISABLED: PackageManager.COMPONENT_ENABLED_STATE_ENABLED,
+                            PackageManager.DONT_KILL_APP
+                    );
+                    return true;
+                }
+            });
         }
     }
 

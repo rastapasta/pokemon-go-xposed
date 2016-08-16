@@ -22,8 +22,19 @@
             android:title="@string/pref_title_endpoint" />
 
         <CheckBoxPreference
+
+
             android:defaultValue="false"
             android:key="enable_ssl"
             android:title="@string/pref_title_ssl"/>
     </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_general">
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="hide_app"
+            android:title="@string/pref_title_hide"/>
+    </PreferenceCategory>
+
 </PreferenceScreen>
