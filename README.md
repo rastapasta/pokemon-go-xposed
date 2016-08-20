@@ -19,6 +19,6 @@ Additionally it lets you set a custom API endpoint instead of the hardcoded one,
 * Install the [Xposed Framework](http://repo.xposed.info/module/de.robv.android.xposed.installer)
 * To install
   * install [Pokemon Go Trust Certificate](http://repo.xposed.info/module/de.rastapasta.android.xposed.pokemongo) via the Xposed Installer
-  * or manually download and install the [PokemonGoXposed module](https://github.com/rastapasta/pokemon-go-xposed/releases/download/v1.1/PokemonGoXposed.apk)
+  * or manually download and install the [PokemonGoXposed module](https://github.com/rastapasta/pokemon-go-xposed/releases/download/v2.1/PokemonGoXposed.apk)
 * Activate the module in the Xposed Installer
 * Restart your phone!
